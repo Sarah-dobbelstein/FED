@@ -8,21 +8,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 
-
-
 ## Jij
 
 <details open>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Sarah Dobbelstein
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  mijn startniveu is blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Ik ga mij focussen op responsivenes
  
 </details>
 
@@ -35,8 +33,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details open>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
-  ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+### Je opdracht:
+  https://www.depizzabakkers.nl/ 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
