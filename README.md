@@ -37,11 +37,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://nude-project.com
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Nude project 
+  Nude project home
   <img src="readme-images/screenshot-site.JPG" width="375px" alt="Home pagina met de verschillende kledingstukken en collecties">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  Nude project kledingstuk details 
   <img src="readme-images/screenshot-pagina-2.JPG" width="375px" alt="Pagina met de kledingstuk details">
  
 </details>
