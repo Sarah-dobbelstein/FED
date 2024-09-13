@@ -33,27 +33,76 @@
 /* HEADER */
 /****************/
 
-section:nth-of-type(1) {
+/* In de les gedaan*/
+body {
+	margin: 0;
+}
+
+header {
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+header > a img{
+	width: 50%;
+	margin:0 auto;
+}
+
+/* button moet eerst komen in de volgorde, daarom order -1 */
+header > button {
+	order: -1; 
+	margin: 1em;
+	font-size: 1em;
+}
+
+header menu {
+	display: flex;
+	gap: 1em;
+	margin: 0;
+	padding: 1em;
+	list-style-type: none;
+}
+
+header nav.zichtbaar {
+	width: 100%;
+}
+
+header nav.zichtbaar ul {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	list-style-type: none;
+	padding: 1em;
+	margin: 0;
+}
+
+nav.hamburgermenu {
+	position: fixed;
+	inset: 0;
+	translate: -100%;
+}
+
+/* Tot hier in de les gedaan*/
+
+
+/* section:nth-of-type(1) {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	flex-wrap: nowrap;
-}
-
-section a{
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
-section img{
-	max-width: 30%;
-	height: auto;
-	margin-left: 39%;
-	/* hoe kan ik dit anders coderen? */
-}
-
+} */
 
 /* code voor de carrousel van navigatie*/
+/* main section:nth-of-type(6) ul {
+/* ul in de 6 e sectie*/	
+/* } */
+
+/* main section:nth-of-type(6) ul: :nth-last-of-type(2) { */
+	/* 2e ul in de 6 e sectie */	
+	/* } */ 
+
+
 ul:nth-of-type(1) {
     display: flex;
     overflow-x: auto;
@@ -62,7 +111,6 @@ ul:nth-of-type(1) {
 	gap: 2em;
 }
 
-/* Hoe */
 ul:nth-of-type(1) li {
 	flex-shrink: 0;
 	
@@ -73,6 +121,14 @@ video{
 	width: 100%;
 	height: auto;
 
+}
+
+/* code voor grid met de artikelen*/
+/* waarom werkt dit niet? het wordt toegepast op de ul eronder*/
+ul:nth-of-type(3){
+	display: grid;
+	grid-template-columns: repeat(autofit, minmax(16em, 1fr));
+	gap: 1em;
 }
 
 
@@ -86,9 +142,9 @@ ul:nth-of-type(3) {
 }
 
 /* waarom werkt het niet met li? maar wel met img? */
-ul:nth-of-type(3) img {
+/* ul:nth-of-type(3) img {
 	display: flex;
     width: 15em;
-}
+} */
 
 

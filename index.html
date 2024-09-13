@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 	
 <head>
 	<meta charset="UTF-8">
@@ -13,18 +13,17 @@
 </head>
 
 <body>
+	<script defer src="scripts/script.js"></script>
 	<header>
-		<script defer src="scripts/script.js"></script>
-		<section>
-			<button>menu</button>
-			<h1><img src="images/logonudeproject.png" alt="logo van nude project, heeft een bruin lettertype"></h1>
-			<button>search</button>
-			<a href="#">Cart</a>
-		</section>
+		<a href="#" aria-current="page"><img src="images/logonudeproject.png" alt="link naar de home page"></a>
+		<button>menu</button>
+		<menu>
+			<li><button>search</button></li>
+			<li><button>Cart</button></li>
+		</menu>
 
-		<p>Free shipping: national over 100€ international over 200€</p>
-
-		<nav>
+		<!--dit menu kun je als een carrusel bedienen-->
+		<nav class="zichtbaar">
 			<ul>
 				<li>
 					<a href="#" alt="menu selectie new in">New in</a>
@@ -58,15 +57,75 @@
 				</li>
 			</ul>
 		</nav>
+
+		<!--hier alle linkjes naar haburger menu-->
+		<nav class="hamburgermenu">
+			<ul>
+				<li><a href="#">New arrivals</a></li>
+				<li><a href="#">Woman specials</a></li>
+				<li><button>Clothing +</button>
+					<ul>
+						<li><a href="#">All</a></li>
+						<li><a href="#">Tees</a></li>
+						<li><a href="#">Hoodies</a></li>
+						<li><a href="#">Sweaters</a></li>
+						<li><a href="#">Shirts & polos</a></li>
+						<li><a href="#">Pants</a></li>
+						<li><a href="#">Shorts</a></li>
+						<li><a href="#">Swimwear</a></li>
+						<li><a href="#">Cargo</a></li>
+						<li><a href="#">Knitwear</a></li>
+						<li><a href="#">Outerwear</a></li>
+						<li><a href="#">Underwear</a></li>
+					</ul>
+				</li>
+				<li><button>Accessories +</button>
+					<ul>
+						<li><a href="#">All</a></li>
+						<li><a href="#">Headwear</a></li>
+						<li><a href="#">Jewellery</a></li>
+						<li><a href="#">Bags & leather goods</a></li>
+						<li><a href="#">Objects</a></li>
+					</ul>
+				</li>
+				<li><button>Collections +</button>
+					<ul>
+						<li><a href="#">Not my first rodeo</a></li>
+						<li><a href="#">La ultima</a></li>
+						<li><a href="#">Nude X playboy</a></li>
+						<li><a href="#">Locally hated</a></li>
+					</ul>
+				</li>
+				<li><a href="#">All products</a></li>
+				<li><a href="#">Gift card</a></li>
+				<li><button>Support +</button>
+					<ul>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Return</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</li>
+				<li><button>Brand +</button>
+					<ul>
+						<li><a href="#">Stores</a></li>
+						<li><a href="#">Careers</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
 	</header>
 
 
+
+	<p>Free shipping: national over 100€ international over 200€</p>
 	<main>		
 		<section>	
 			<video src="images/Homevideo.mp4"></video> 
 			<!-- sceen reader uitleg toevoegen-->
 		</section>
 		
+		<section>
 			<h2>New arrivals</h2>
 			<a href="#">View all</a> <!--link naar pagina met alle kleding-->
 			<ul>
@@ -114,8 +173,9 @@
 					<button>+</button> <!--button om maat te selecteren-->
 				</li>
 			</ul>
+		</section>
 		
-
+		<section>
 			<ul>
 				<li>
 					<a href="#"><img src="images/hoodies-collectie.jpg" alt="link naar de hoodies collectie"></a>
@@ -130,7 +190,7 @@
 					<a href="#"><img src="images/chica-collectie.webp" alt="link naar de dames collectie"></a>
 				</li>
 			</ul>
-		
+		</section>
 
 		<section>
 			<h2>Our stores</h2>
@@ -144,6 +204,8 @@
 		</section>
 
 			<!--dit is een carrousel met allemaal plaatjes-->
+			<!--hier meot een sectie omheen-->
+		
 			<ul>
 				<li><a href="#"><img src="images/foto1.webp" alt="foto van meisje met broek en vest"></a></li>
 				<li><a href="#"><img src="images/foto2.webp" alt="foto van meisje en jongen"></a></li>
@@ -175,7 +237,8 @@
 	</main>
 
 	<footer>
-		<img src="images/logonudeproject.png" alt="het logo van nude project, heeft een bruin lettertype">
+		<!--nog een link van het logo maken-->
+		<img src="images/logonudeproject.png" alt="link naar de hom page">
 		<p>help@nude-project.com</p>
 		<!--hier staan linkjes naar de socials maar ik kan de plaatje niet downloaden-->
 
