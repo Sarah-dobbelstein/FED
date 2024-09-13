@@ -55,6 +55,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  ik heb het voor de pizzabakkes site gedaan, daarna was het beter om te wisselen van site, voor de varatie binnen de schermen. Dus dit moet ik nog een keer uitvoeren voor deze site. Dat ga ik dit weekend doen.
 
 </details>
 
@@ -66,13 +67,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/screenshot-site.JPG" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdownschets1.png" width="375px" alt="breakdown van eerste deel van de pagina">
+  <img src="readme-images/breakdownschets2.png" width="375px" alt="breakdown van tweede deel van de pagina">
+  <img src="readme-images/breakdownschets3.png" width="375px" alt="breakdown van derde deel van de pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dynamisch-deel.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/tweede-dynamische-deel.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -92,12 +95,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  | Sarah D                    | student 2          | student 3    | student 4        |
+  | plaatjes downloaden        | ---                | ---          | ---              |
+  | linkjes in li              | en dit             | en ik dit    | en dan ik dat    |
+  | nav items op een lijn
+  | screen reader alt's        | dit wil ik zeker |
+  | kleur opties hoe toevoegen | ...                | ...          | ...              |
+  |plaatje, of een voor een?   |
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
