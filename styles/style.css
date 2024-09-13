@@ -29,32 +29,50 @@
 
 /* jouw code */
 
+/****************/
+/* HEADER */
+/****************/
+
+section:nth-of-type(1) {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	flex-wrap: nowrap;
+}
+
+section a{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+section img{
+	max-width: 30%;
+	height: auto;
+	margin-left: 39%;
+	/* hoe kan ik dit anders coderen? */
+}
+
+
 /* code voor de carrousel van navigatie*/
 ul:nth-of-type(1) {
     display: flex;
     overflow-x: auto;
-    gap: 0.35em;
     list-style: none;
 	padding: 0;
+	gap: 2em;
 }
 
 /* Hoe */
-ul:nth-of-type(3) li {
+ul:nth-of-type(1) li {
 	flex-shrink: 0;
+	
 }
 
 /* Video moet mee schalen*/
-
 video{
 	width: 100%;
 	height: auto;
 
-}
-
-/* waarom werkt het niet met li? maar wel met img? */
-ul:nth-of-type(1) li {
-	display: flex;
-    width: 15em;
 }
 
 
