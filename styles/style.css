@@ -29,3 +29,48 @@
 
 /* jouw code */
 
+/* code voor de carrousel van navigatie*/
+ul:nth-of-type(1) {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.35em;
+    list-style: none;
+	padding: 0;
+}
+
+/* Hoe */
+ul:nth-of-type(3) li {
+	flex-shrink: 0;
+}
+
+/* Video moet mee schalen*/
+
+video{
+	width: 100%;
+	height: auto;
+
+}
+
+/* waarom werkt het niet met li? maar wel met img? */
+ul:nth-of-type(1) li {
+	display: flex;
+    width: 15em;
+}
+
+
+/* code voor de carrousel van plaatjes*/
+ul:nth-of-type(3) {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.35em;
+    list-style: none;
+	padding: 0;
+}
+
+/* waarom werkt het niet met li? maar wel met img? */
+ul:nth-of-type(3) img {
+	display: flex;
+    width: 15em;
+}
+
+
