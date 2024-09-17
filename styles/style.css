@@ -50,6 +50,7 @@ header a img {
 	margin: 0 auto;
     max-width: 50%;
 	height: auto;
+	align-items: center;
 	
 }
 
@@ -87,6 +88,15 @@ nav.hamburgermenu {
 	position: fixed;
 	inset: 0;
 	translate: -100%;
+}
+
+p{
+	background-color: rgb(131, 67, 51);
+	margin: 0;
+	padding:1em;
+	width:100%;
+	text-align:center;
+	color: white;
 }
 
 /* Tot hier in de les gedaan*/
