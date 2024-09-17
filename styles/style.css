@@ -17,6 +17,7 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--color-header-p: rgb(131, 67, 51);
 }
 
 
@@ -26,6 +27,15 @@
 /****************/
 /* JOUW STYLING */
 /****************/
+
+@font-face {
+	font-family:'Helvetica_Neue';
+	src:
+	url('https://nude-project.com/cdn/shop/files/HelveticaNeueLight.woff2?v=4978433534137394268');
+	font-weight:700;
+	font-style:normal;
+	font-display:fallback;
+}
 
 /* jouw code */
 
@@ -39,16 +49,23 @@ body {
 }
 
 header {
+	font-family:'Helvetica_Neue';
+	text-transform: uppercase;
 	display:flex;
 	flex-wrap:wrap;
 	align-items:center;
+	justify-content: space-between;
 
+}
+
+header > a{
+	width: clamp(6em, 20vw, 12em);
 }
 
 header a img { 
 	display: block;
 	margin: 0 auto;
-    max-width: 50%;
+    width: 100%;
 	height: auto;
 	align-items: center;
 	
@@ -91,7 +108,7 @@ nav.hamburgermenu {
 }
 
 p{
-	background-color: rgb(131, 67, 51);
+	background-color: var(--color-header-p);
 	margin: 0;
 	padding:1em;
 	width:100%;
@@ -122,41 +139,3 @@ header nav ul {
 	flex-shrink: 0;	
 }
 
-/* Video moet mee schalen*/
-video{
-	width: 100%;
-	height: auto;
-
-}
-
-/* code voor grid met de artikelen*/
-/* waarom werkt dit niet? het wordt toegepast op de ul eronder*/
-ul:nth-of-type(3){
-	display: grid;
-	grid-template-columns: repeat(autofit, minmax(16em, 1fr));
-	gap: 1em;
-}
-
-
-/* code voor de carrousel van plaatjes*/
-
-/* main section:nth-of-type(6) ul {
-/* ul in de 6 e sectie*/	
-/* } */
-
-/* main section:nth-of-type(6) ul: :nth-last-of-type(2) { */
-	/* 2e ul in de 6 e sectie */	
-	/* } */ 
-
-main section:nth-of-type(5) ul:nth-last-of-type(2) {
-    display: flex;
-    overflow-x: auto;
-    gap: 0.35em;
-    list-style: none;
-	padding: 0;
-}
-
-main section:nth-of-type(5) ul:nth-last-of-type(2) img {
-	display: flex;
-    width: 15em;
-} 

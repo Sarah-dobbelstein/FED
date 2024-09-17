@@ -1,0 +1,38 @@
+/* Video moet mee schalen*/
+video{
+	width: 100%;
+	height: auto;
+
+}
+
+/* code voor grid met de artikelen*/
+/* waarom werkt dit niet? het wordt toegepast op de ul eronder*/
+ul:nth-of-type(3){
+	display: grid;
+	grid-template-columns: repeat(autofit, minmax(16em, 1fr));
+	gap: 1em;
+}
+
+
+/* code voor de carrousel van plaatjes*/
+
+/* main section:nth-of-type(6) ul {
+/* ul in de 6 e sectie*/	
+/* } */
+
+/* main section:nth-of-type(6) ul: :nth-last-of-type(2) { */
+	/* 2e ul in de 6 e sectie */	
+	/* } */ 
+
+main section:nth-of-type(5) ul:nth-last-of-type(2) {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.35em;
+    list-style: none;
+	padding: 0;
+}
+
+main section:nth-of-type(5) ul:nth-last-of-type(2) img {
+	display: flex;
+    width: 15em;
+} 
