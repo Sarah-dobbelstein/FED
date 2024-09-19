@@ -17,7 +17,7 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
-	--color-header-p: rgb(131, 67, 51);
+	--color-header-p: #4d3430;
 }
 
 
@@ -29,10 +29,10 @@
 /****************/
 
 @font-face {
-	font-family:'Helvetica_Neue';
+	font-family:'Helvetica_Neue_light';
 	src:
-	url('https://nude-project.com/cdn/shop/files/HelveticaNeueLight.woff2?v=4978433534137394268');
-	font-weight:700;
+	url('../fonts/HelveticaNeueLight.woff2');
+	font-weight:400;
 	font-style:normal;
 	font-display:fallback;
 }
@@ -46,11 +46,13 @@
 /* In de les gedaan*/
 body {
 	margin: 0;
+	font-family:'Helvetica_Neue_light', sans-serif;
+	color: #4d3430;
+	text-transform: uppercase;
+	font-size: .7em;
 }
 
 header {
-	font-family:'Helvetica_Neue';
-	text-transform: uppercase;
 	display:flex;
 	flex-wrap:wrap;
 	align-items:center;
@@ -59,7 +61,7 @@ header {
 }
 
 header > a{
-	width: clamp(6em, 20vw, 12em);
+	width: clamp(6em, 40vw, 12em);
 }
 
 header a img { 
@@ -107,7 +109,7 @@ nav.hamburgermenu {
 	translate: -100%;
 }
 
-p{
+section:nth-of-type(1) p {
 	background-color: var(--color-header-p);
 	margin: 0;
 	padding:1em;
@@ -115,6 +117,10 @@ p{
 	text-align:center;
 	color: white;
 }
+
+/* main section:nth-of-type(6) ul {
+/* ul in de 6 e sectie*/	
+/* } */
 
 /* Tot hier in de les gedaan*/
 
@@ -137,5 +143,9 @@ header nav {
 
 header nav ul {
 	flex-shrink: 0;	
+}
+
+footer img{
+	width: 100%;
 }
 
