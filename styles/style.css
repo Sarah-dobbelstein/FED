@@ -17,7 +17,7 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
-	--color-header-p: #4d3430;
+	--basis-color: #4d3430;
 }
 
 
@@ -37,6 +37,17 @@
 	font-display:fallback;
 }
 
+@font-face {
+	font-family:'Helvetica_Neue';
+	src:
+	url('../fonts/helvetica.woff2');
+	font-weight:400;
+	font-style:normal;
+	font-display:fallback;
+}
+
+
+
 /* jouw code */
 
 /****************/
@@ -47,7 +58,7 @@
 body {
 	margin: 0;
 	font-family:'Helvetica_Neue_light', sans-serif;
-	color: #4d3430;
+	color: var(--basis-color);
 	text-transform: uppercase;
 	font-size: .7em;
 }
@@ -90,6 +101,7 @@ header menu {
 
 header nav.zichtbaar {
 	width: 100%;
+	border-top: .1em solid var(--basis-color);
 }
 
 
@@ -100,6 +112,12 @@ header nav.zichtbaar ul {
 	list-style-type: none;
 	padding: 1em;
 	margin: 0;
+	
+}
+
+header nav.zichtbaar a {
+	color: var(--basis-color);
+	font-family:'Helvetica_Neue', sans-serif;
 }
 
 
@@ -110,7 +128,7 @@ nav.hamburgermenu {
 }
 
 section:nth-of-type(1) p {
-	background-color: var(--color-header-p);
+	background-color: var(--basis-color);
 	margin: 0;
 	padding:1em;
 	width:100%;
