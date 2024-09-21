@@ -18,6 +18,7 @@
 	--color-text:#111;
 	--color-background:#eee;
 	--basis-color: #4d3430;
+	--kleur-achtergrond: white;
 }
 
 
@@ -60,7 +61,7 @@ body {
 	font-family:'Helvetica_Neue_light', sans-serif;
 	color: var(--basis-color);
 	text-transform: uppercase;
-	font-size: .7em;
+	font-size: 1em;
 }
 
 header {
@@ -163,7 +164,100 @@ header nav ul {
 	flex-shrink: 0;	
 }
 
-footer img{
-	width: 100%;
+
+/* stijlen van de footer */
+footer {
+	font-family:'Helvetica_Neue_light', sans-serif;
+	color: var(--basis-color);
+	text-transform: uppercase;
+	font-size: .7em;
+	border-top: .1em solid var(--basis-color);
+	padding-top: 3em;
 }
 
+footer p:nth-of-type(1) {
+	text-align: center;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+footer img{
+	width: 25%;
+	display: block;
+	margin: auto;
+	height: auto;
+	align-items: center;
+	
+}
+
+footer > ul {
+	list-style-type: none;
+ }
+ 
+footer ul li button  {
+	 width: 100%; 
+	 display: block;
+	 background-color: var(--kleur-achtergrond);
+	 font-family:'Helvetica_Neue_light', sans-serif;
+	 color: var(--basis-color);
+	 text-transform: uppercase;
+	 border: .1em solid var(--basis-color);
+	 text-align: left;
+	 padding: .5em;
+	 margin-left: -2.6em;
+	 cursor: pointer;
+ }
+
+ footer ul ul {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: var(--kleur-achtergrond); /* Zorg ervoor dat de achtergrond zichtbaar is */
+    color: var(--basis-color); 
+}
+
+footer ul li {
+    position: relative;
+}
+
+footer ul ul li a {
+    display: block;
+    padding: 0.1em;
+    text-decoration: none;
+    color: var(--basis-color);
+}
+
+footer h2 {
+ margin-left: 3em;
+ text-align: left;
+ padding-left: 0;
+}
+
+footer p:nth-of-type(2) {
+	margin-left: 3em;
+	text-align: left;
+}
+
+footer form { 
+	display:flex; 
+	align-items:center; 
+	gap:.5em;
+}
+
+footer form input:nth-of-type(1){ 
+	padding:.35em;
+	width:0; /* reset default width */
+	flex-grow:1;
+	background-color: var(--kleur-achtergrond);
+	border:solid .1em var(--basis-color);
+	margin-left: 2em;
+}
+
+footer form input:nth-of-type(2){ 
+	padding:.35em;
+	margin-right: 2em;
+	color: var(--kleur-achtergrond);
+	background-color: var(--basis-color);
+}
