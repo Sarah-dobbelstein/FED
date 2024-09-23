@@ -192,6 +192,7 @@ footer img{
 
 footer > ul {
 	list-style-type: none;
+	padding: 0em;
  }
  
 footer ul li button  {
@@ -201,10 +202,13 @@ footer ul li button  {
 	 font-family:'Helvetica_Neue_light', sans-serif;
 	 color: var(--basis-color);
 	 text-transform: uppercase;
-	 border: .1em solid var(--basis-color);
+	 border-bottom: .1em solid var(--basis-color);
+	 border-top: .1em solid var(--basis-color);
+	 border-left: none;
+	 border-right: none;
 	 text-align: left;
 	 padding: .5em;
-	 margin-left: -2.6em;
+	 margin: 0em;
 	 cursor: pointer;
  }
 
@@ -260,4 +264,15 @@ footer form input:nth-of-type(2){
 	margin-right: 2em;
 	color: var(--kleur-achtergrond);
 	background-color: var(--basis-color);
+}
+
+footer p:nth-last-of-type(1){
+	color: var(--kleur-achtergrond);
+	background-color: var(--basis-color);
+	display: flex;
+	justify-content: center;
+	padding: 1.9em;
+	margin-bottom: 0;
+	margin-top: 7em;
+	font-size: .8em;
 }

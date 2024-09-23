@@ -31,6 +31,33 @@ const carrousel = document.getElementById('CarrouselAutoScroll');
 const autoScrollInterval = 30; // Tijd in milliseconden tussen het scrollen
 let AutoScrollTimer;
 
+  //////////////////////////////////
+  // naar volgende/vorige element //
+  function goToElement(direction) {
+		// het huidige current element opzoeken
+		let currentElement = carrousel.querySelector(":scope > ul > .current");
+
+		let newElement;
+		if (direction == "previous") {
+			// het nieuwe element is het vorige broertje/zusje
+			newElement = currentElement.previousElementSibling;
+			// checken of nieuwe element bestaat - anders naar laatste
+			if (!newElement) {
+				newElement = carrousel.querySelector(":scope > ul > li:last-of-type");
+			}
+		} else {
+			// het nieuwe element is het volgende broertje/zusje
+			newElement = currentElement.nextElementSibling;
+			// checken of nieuwe element bestaat - anders naar eerste
+			if (!newElement) {
+				newElement = carrousel.querySelector(":scope > ul > li:first-of-type");
+			}
+		}
+
+		// naar het nieuwe element scrollen
+		scrollToElement(newElement);
+  }
+
 function AutoScroll() {
     // de class "autoScrolling" toevoegen aan de carrousel
     carrousel.classList.add("autoScrolling");
@@ -55,3 +82,4 @@ function createCarrousel(id) {
     AutoScroll();
     //je kunt hier ook meerdere carrousellen activeren
   })();
+
