@@ -17,7 +17,7 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
-	--basis-color: #4d3430;
+	--basis-color: #452B1A;
 	--kleur-achtergrond: white;
 }
 
@@ -90,6 +90,11 @@ header button {
 	order: -1; 
 	margin: 1em;
 	font-size: 1em;
+	width: 1.2em;
+	border: none;
+	background-color: transparent;
+	/* dit moet op alle buttons!!! */
+	background: none;
 }
 
 header menu {
@@ -98,6 +103,19 @@ header menu {
 	margin: 0;
 	padding: 1em;
 	list-style-type: none;
+	
+
+}
+
+header menu li button {
+	border: none;
+	background-color: transparent;
+	/* dit moet op alle buttons!!! */
+	background: none;
+}
+
+header menu li button img {
+	width: 1.2em;
 }
 
 header nav.zichtbaar {
