@@ -21,7 +21,31 @@
 	--kleur-achtergrond: white;
 }
 
+/* font sizes */
+body {
+	margin: 0;
+	font-family:'Helvetica_Neue_light', sans-serif;
+	color: var(--basis-color);
+	text-transform: uppercase;
+	font-size: 1em;
+}
 
+h2 {
+	font-family:'Helvetica_Neue', sans-serif;
+	font-size: 1.1em;
+	font-weight: 800;
+	padding-left: .5em;
+	margin-bottom: 0em;
+}
+
+h3 {
+font-size: 1em;
+font-weight: 700;
+}
+
+a {
+	font-size: 1em;
+}
 
 
 
@@ -157,33 +181,11 @@ header nav {
 
 header nav ul {
 	flex-shrink: 0;	
-}
-
-/* font sizes */
-body {
-	margin: 0;
-	font-family:'Helvetica_Neue_light', sans-serif;
-	color: var(--basis-color);
-	text-transform: uppercase;
 	font-size: 1em;
+	line-height: 2em;
 }
 
-h2 {
-	font-family:'Helvetica_Neue', sans-serif;
-	font-size: .8em;
-	font-weight: 800;
-	padding-left: 1em;
-	margin-bottom: 0em;
-}
 
-h3 {
-font-size: .7em;
-font-weight: 700;
-}
-
-a {
-	font-size: .7em;
-}
 /* stijlen van de footer */
 footer {
 	font-family:'Helvetica_Neue_light', sans-serif;
@@ -209,9 +211,14 @@ footer img{
 	
 }
 
+/* dropdown menu */
+/* // https://www.w3schools.com/howto/howto_js_dropdown.asp bron voor de dropdown/ */
 footer > ul {
 	list-style-type: none;
 	padding: 0em;
+	position: relative;
+	display: inline-block;
+	width: 100%;
  }
  
 footer ul li button  {
@@ -234,6 +241,7 @@ footer ul li button  {
  footer ul ul {
     display: none;
     position: absolute;
+	width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -241,9 +249,9 @@ footer ul li button  {
     color: var(--basis-color); 
 }
 
-footer ul li {
+/* footer ul li {
     position: relative;
-}
+} */
 
 footer ul ul li a {
     display: block;

@@ -1,7 +1,4 @@
-// JavaScript Document
-console.log("hi");
-
- // Zoek alle buttons binnen de ul
+// Zoek alle buttons binnen de footer ul
 const buttons = document.querySelectorAll('footer > ul > li > button');
 
 // Voeg een click event listener toe aan elke button
@@ -10,17 +7,29 @@ buttons.forEach(button => {
         // Zoek de ul die zich direct na de button bevindt
         const dropdown = this.nextElementSibling;
 
+        // Toggle het display van de huidige dropdown
+        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+
         // Sluit andere dropdowns als ze open zijn
         document.querySelectorAll('footer > ul > li > ul').forEach(ul => {
             if (ul !== dropdown) {
                 ul.style.display = 'none'; // Sluit andere open dropdowns
             }
         });
-
-        // Toggle het display van de huidige dropdown
-        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
     });
 });
+
+// Sluit de dropdown als er buiten wordt geklikt
+window.addEventListener('click', function(event) {
+    if (!event.target.matches('footer > ul > li > button')) {
+        document.querySelectorAll('footer > ul > li > ul').forEach(ul => {
+            ul.style.display = 'none'; // Sluit alle dropdowns
+        });
+    }
+});
+
+
+// https://www.w3schools.com/howto/howto_js_dropdown.asp bron voor de dropdown/
 
 
 /*******************************/

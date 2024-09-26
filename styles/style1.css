@@ -17,7 +17,7 @@ section:nth-of-type(3) article a{
     
 }
 
-section:nth-of-type(3) ul{
+section:nth-of-type(3) > ul{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1em;
@@ -33,7 +33,7 @@ section:nth-of-type(3) ul{
 }
 
 /*  uit de grid per artikel les gehaald */
-section:nth-of-type(3) ul li{
+section:nth-of-type(3) > ul > li{
 	/* de cards hebben een verhouding van 2 breed bij 4 hoog */
   /* mits de content dat toestaat */
   /* aspect-ratio: 2/5; waarom moet dit weg?? VRAGEN*/
@@ -51,26 +51,26 @@ section:nth-of-type(3) ul li{
 }
 
 /* voor de titel */
-section:nth-of-type(3) ul li a:nth-of-type(1) {
+section:nth-of-type(3) > ul > li a:nth-of-type(1) {
   /* grid-area: row-start / column-start / row-end / col-end */
   grid-area: 3 / 1 / 4 / 2 ;
   
 }
 
-section:nth-of-type(3) ul li a h3 {
+section:nth-of-type(3) > ul > li a h3 {
   margin: 0em; 
   color: var(--basis-color);
 }
 
 /* voor de image */
-section:nth-of-type(3) ul li a:nth-of-type(2) {
+section:nth-of-type(3) > ul > li a:nth-of-type(2) {
   /* grid-area: row-start / column-start / row-end / col-end */
   grid-area: 1 / 1 / 3 / 3 ;
 
 }
 
 /* voor de prijs */
-section:nth-of-type(3) ul li p:nth-of-type(1) {
+section:nth-of-type(3) > ul > li p:nth-of-type(1) {
   /* grid-area: row-start / column-start / row-end / col-end */
   grid-area: 4 / 1 / 5 / 2;
   line-height:0em;
@@ -78,24 +78,27 @@ section:nth-of-type(3) ul li p:nth-of-type(1) {
 }
 
 /* voor de kleuren lijst */
-section:nth-of-type(3) ul li ul{
+section:nth-of-type(3) ul ul{
+    /* aspect-ratio: 1; */
     list-style-type: none;
     display: flex;
+    align-items: center;
     gap: .3em;
-    /* font-size: .5em; */
     padding-left: 0em;
     /* grid-area: row-start / column-start / row-end / col-end */
     grid-area: 5 / 1 / 6 / 2;
-    margin: 0;      
+    margin: 0;     
+    /* width: 5px;  */
 }
+ 
 
-/* elk bolletje in de lijst met kleuren */
-section:nth-of-type(3) ul ul li{
-  /* width: .1em; */
-  /* aspect-ratio: 1; */
-
+section:nth-of-type(3) ul ul li a {
+  display:block;
+  width:1em;
+  aspect-ratio: 1;
   background-color: black;
   border-radius: 50%;
+  width: .6em;
 }
 
 /* elk bolletje in de lijst met kleuren alleen voor het 4e item */
@@ -109,6 +112,9 @@ section:nth-of-type(3) ul ul li:nth-last-child(1){
 section:nth-of-type(3) ul li p:nth-of-type(2) {
   /* grid-area: row-start / column-start / row-end / col-end */
   grid-area: 1 / 1 / 2 / 2;
+  background-color: var(--kleur-achtergrond);
+  width: 4em;
+  margin-left: .6em;
 }
 
 /* voor de button met + */
@@ -295,9 +301,9 @@ main section:nth-of-type(6) ul:nth-of-type(1) {
 
 main section:nth-of-type(6) ul:nth-of-type(1) img {
 	display: flex;
-    width: 28em;
+    width: 20em;
 } 
-
+ 
 
 
 /* zinnen die afwisselen boven de footer */

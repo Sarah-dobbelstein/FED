@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nude project 2.0 artikel</title>
-    <link href="styles/style2.css" rel="stylesheet pagina 2">
     <link href="styles/style.css" rel="stylesheet algemeen">
+    <link href="styles/style2.css" rel="stylesheet pagina 2">
 </head>
 <body>
     <script defer src="scripts/script.js"></script>
 	<header>
-			<a href="index.html" aria-current="page"><img src="images/logonudeproject.png" alt="link naar de home page"></a>
-			<button>menu</button>
-			<menu>
-					<li><button>search</button></li>
-					<li><button>Cart</button></li>
-			</menu>
+        <a href="index.html" aria-current="page"><img src="images/logonudeproject.png" alt="link naar de home page"></a>
+        <button><img src="images/menu.svg" alt="menu icon"></button>
+        <menu>
+                <li><button><img src="images/search.svg" alt="search icon"></button></li>
+                <li><button><img src="images/winkelmand.svg" alt="cart icon"></button></li>
+        </menu>
 		
 		<!--dit menu kun je als een carrusel bedienen-->
 		<nav class="zichtbaar">
@@ -110,14 +110,26 @@
 			</ul>
 		</nav>
 	</header>
+
     <main>
         <section>
-            <h2>Kory boxy hood ash</h2>
-            <p>€99</p>
-            <ul>
-                <li><img src="images/KORY_HOOD_ASH_2_front_800x.webp" alt="Kory hoodie ash front"></li>
-                <li><img src="images/KORY_HOOD_ASH_2_back_800x.webp" alt="Kory hoodie ash back"></li>
-            </ul>
+            <article
+            id="Carrouselitems"
+		    class="clothes"
+		    tabindex="-1">
+                <h2>Kory boxy hood ash</h2>
+                <p>€99</p>
+                <ul>
+                    <li id="front1"><img src="images/KORY_HOOD_ASH_2_front_800x.webp" alt="Kory hoodie ash front"></li>
+                    <li id="back2"><img src="images/KORY_HOOD_ASH_2_back_800x.webp" alt="Kory hoodie ash back"></li>
+                </ul>
+                <nav>
+                    <ul>
+                      <li><a href="#front1" aria-label="go to front1"></a></li>
+                      <li><a href="#back2" aria-label="go to back2"></a></li>
+                    </ul>
+                </nav>
+            </article>
             <ul>
                 <li><img src="images/KORY_HOOD_ASH_2_back_800x.webp" alt=""></li>
                 <li><img src="images/KORYHOODBROWNback_9214fbd1-4939-41af-8993-c30b734efdf8_back_800x.webp" alt=""></li>
@@ -180,7 +192,29 @@
 
         <section>
             <h2>You may also like</h2>
-            <ul></ul>
+           
+        </section>
+
+        <section>
+            <h2>Cult</h2>
+             <!-- dit geheel  nog een keer plakken als de juiste screenreader info erbij staat -->
+             <ul> 
+				<li><a href="#"><img src="images/foto1.webp" alt="foto van meisje met broek en vest"></a></li>
+				<li><a href="#"><img src="images/foto2.webp" alt="foto van meisje en jongen"></a></li>
+				<li><a href="#"><img src="images/foto3.webp" alt="foto van jongen die leunt op een scooter"></a></li>
+				<li><a href="#"><img src="images/foto4.webp" alt="foto van meisje en jongen"></a></li>
+				<li><a href="#"><img src="images/foto5.webp" alt="foto van jongen emt blouse aan"></a></li>
+				<li><a href="#"><img src="images/foto6.webp" alt="foto van de achterkant van een jongen met een pet op"></a></li>
+				<li><a href="#"><img src="images/foto7.webp" alt="foto van een jongen emt een trui aan met een print"></a></li>
+				<li><a href="#"><img src="images/foto8.webp" alt="foto van ene jongen met een pet op"></a></li>
+				<li><a href="#"><img src="images/foto9.webp" alt="foto van een jongen met een geel t-shirt aan"></a></li>
+				<li><a href="#"><img src="images/foto10.webp" alt="foto van een meisje met een croptop en een witte broek"></a></li>
+				<li><a href="#"><img src="images/foto11.webp" alt="ingezoomde foto van een jongen met een blouse aan en veel ringen om"></a></li>
+				<li><a href="#"><img src="images/foto12.webp" alt="foto van jongen met een gestreepte blouse aan en een wijde broek"></a></li>
+				<li><a href="#"><img src="images/foto13.webp" alt="foto van een meisje met een gestreept vest aan"></a></li>
+				<li><a href="#"><img src="images/foto14.webp" alt="foto van een jongen met een shirt aan met een print op de achterkant"></a></li>
+				<li><a href="#"><img src="images/foto15.webp" alt="foto van een meisje in de spiegel, ze heeft een trui met een print aan"></a></li>				
+			</ul>  
         </section>
 
     </main>
