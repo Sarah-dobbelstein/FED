@@ -33,7 +33,6 @@
 	font-family:'Helvetica_Neue_light';
 	src:
 	url('../fonts/HelveticaNeueLight.woff2');
-	font-weight:400;
 	font-style:normal;
 	font-display:fallback;
 }
@@ -42,7 +41,6 @@
 	font-family:'Helvetica_Neue';
 	src:
 	url('../fonts/helvetica.woff2');
-	font-weight:400;
 	font-style:normal;
 	font-display:fallback;
 }
@@ -56,13 +54,7 @@
 /****************/
 
 /* In de les gedaan*/
-body {
-	margin: 0;
-	font-family:'Helvetica_Neue_light', sans-serif;
-	color: var(--basis-color);
-	text-transform: uppercase;
-	font-size: 1em;
-}
+
 
 header {
 	display:flex;
@@ -103,8 +95,6 @@ header menu {
 	margin: 0;
 	padding: 1em;
 	list-style-type: none;
-	
-
 }
 
 header menu li button {
@@ -155,19 +145,6 @@ section:nth-of-type(1) p {
 	color: white;
 }
 
-/* main section:nth-of-type(6) ul {
-/* ul in de 6 e sectie*/	
-/* } */
-
-/* Tot hier in de les gedaan*/
-
-
-/* section:nth-of-type(1) {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	flex-wrap: nowrap;
-} */
 
 /* code voor de carrousel van navigatie*/
 header nav {
@@ -182,7 +159,31 @@ header nav ul {
 	flex-shrink: 0;	
 }
 
+/* font sizes */
+body {
+	margin: 0;
+	font-family:'Helvetica_Neue_light', sans-serif;
+	color: var(--basis-color);
+	text-transform: uppercase;
+	font-size: 1em;
+}
 
+h2 {
+	font-family:'Helvetica_Neue', sans-serif;
+	font-size: .8em;
+	font-weight: 800;
+	padding-left: 1em;
+	margin-bottom: 0em;
+}
+
+h3 {
+font-size: .7em;
+font-weight: 700;
+}
+
+a {
+	font-size: .7em;
+}
 /* stijlen van de footer */
 footer {
 	font-family:'Helvetica_Neue_light', sans-serif;
