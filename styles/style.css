@@ -15,12 +15,20 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-	--basis-color: #452B1A;
-	--kleur-achtergrond: white;
+	color-scheme: light dark;
+	--color-black:black;
+	--basis-color: light-dark(#452B1A, pink)  ;
+	--kleur-achtergrond: light-dark(white, black);
 	--kleur-shoppay: #5A31F4;
+	--kleur-text-wit: white;
+	--kleuropties1: #7F412E;
+	--kleuropties2: #C7C8C9;
+	--kleuropties3: #F8F2C0;
+	--kleiropties4: #7B807C;
+
 }
+
+/* @media (prefers-color-scheme: dark) */
 
 /* font sizes */
 body {
@@ -287,15 +295,16 @@ footer form input:nth-of-type(1){
 	margin-left: 2em;
 }
 
-footer form input:nth-of-type(2){ 
+footer form button{ 
 	padding:.35em;
 	margin-right: 2em;
-	color: var(--kleur-achtergrond);
 	background-color: var(--basis-color);
+	color: var(--kleur-text-wit);
+
 }
 
 footer p:nth-last-of-type(1){
-	color: var(--kleur-achtergrond);
+	color: var(--kleur-text-wit);
 	background-color: var(--basis-color);
 	display: flex;
 	justify-content: center;
