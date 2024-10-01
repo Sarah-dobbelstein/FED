@@ -198,7 +198,7 @@ footer {
 	font-size: .7em;
 	border-top: .1em solid var(--basis-color);
 	padding-top: 3em;
-}
+} 
 
 /* stijlen van het logo */
 footer img{
@@ -235,7 +235,7 @@ footer ul li button  {
 	color: var(--basis-color);
 	text-transform: uppercase;
 	border-bottom: .1em solid var(--basis-color);
-	border-top: .1em solid var(--basis-color);
+	/* border-top: .1em solid var(--basis-color); */
 	border-left: none;
 	border-right: none;
 	text-align: left;

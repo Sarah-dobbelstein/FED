@@ -387,6 +387,7 @@ main section:nth-of-type(3) ul li button {
   grid-area: 3 / 2 / 4 / 3;
   width: 2em;
   height: 2em;
+  margin: 0;
   border: none;
 	background-color: transparent;
 	/* dit moet op alle buttons!!! */
