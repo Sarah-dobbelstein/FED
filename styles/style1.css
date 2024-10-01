@@ -22,7 +22,8 @@ section:nth-of-type(3) > ul{
 	grid-template-columns: 1fr 1fr;
 	gap: 1em;
   list-style-type: none;
-  margin: 0;
+  margin-left: 1em;
+  margin-right: 1em;
   padding: 0;
 }
 
@@ -36,8 +37,6 @@ section:nth-of-type(3) > ul{
 section:nth-of-type(3) > ul > li{
 	/* de cards hebben een verhouding van 2 breed bij 4 hoog */
   /* mits de content dat toestaat */
-  /* aspect-ratio: 2/5; waarom moet dit weg?? VRAGEN*/
-  padding:.8em;
   display:grid;
   /* 2 kolommen */
   /* de tweede is zo breed als de plus button */
