@@ -6,15 +6,11 @@
 }
 
 
-
-
-
-
 /*********************/
-/* CUSTOM PROPERTIES */
+/* ROOT, DE KLEUREN */
 /*********************/
 :root {
-	/* startje */
+	/* hier heb ik geklijk ook de dark mode in verwerkt*/
 	color-scheme: light dark;
 	--color-black:black;
 	--basis-color: light-dark(#452B1A, pink)  ;
@@ -28,9 +24,29 @@
 
 }
 
-/* @media (prefers-color-scheme: dark) */
 
-/* font sizes */
+
+
+/****************/
+/* FONT EN SIZE */
+/****************/
+@font-face {
+	font-family:'Helvetica_Neue_light';
+	src:
+	url('../fonts/HelveticaNeueLight.woff2');
+	font-style:normal;
+	font-display:fallback;
+}
+
+@font-face {
+	font-family:'Helvetica_Neue';
+	src:
+	url('../fonts/helvetica.woff2');
+	font-style:normal;
+	font-display:fallback;
+}
+
+/* font sizes per onderdeel */
 body {
 	margin: 0;
 	font-family:'Helvetica_Neue_light', sans-serif;
@@ -58,59 +74,34 @@ a {
 
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
-
-@font-face {
-	font-family:'Helvetica_Neue_light';
-	src:
-	url('../fonts/HelveticaNeueLight.woff2');
-	font-style:normal;
-	font-display:fallback;
-}
-
-@font-face {
-	font-family:'Helvetica_Neue';
-	src:
-	url('../fonts/helvetica.woff2');
-	font-style:normal;
-	font-display:fallback;
-}
-
-
-
-/* jouw code */
 
 /****************/
 /* HEADER */
 /****************/
 
 /* In de les gedaan*/
-
-
 header {
 	display:flex;
 	flex-wrap:wrap;
 	align-items:center;
 	justify-content: space-between;
-
 }
 
+/* vw is een andere eenheid dan em */
 header > a{
-	width: clamp(6em, 40vw, 12em);
+	width: clamp(6em, 32vw, 12em);
 }
 
+/* voor het logo van de site */
 header a img { 
 	display: block;
 	margin: 0 auto;
     width: 100%;
 	height: auto;
-	align-items: center;
-	
+	align-items: center;	
 }
 
-/* button moet eerst komen in de volgorde, daarom order -1 */
+/* button voor het menu moet eerst komen in de volgorde, daarom order -1 */
 header button {
 	order: -1; 
 	margin: 1em;
@@ -118,10 +109,10 @@ header button {
 	width: 1.2em;
 	border: none;
 	background-color: transparent;
-	/* dit moet op alle buttons!!! */
 	background: none;
 }
 
+/* hierin zitten de zoek button en de cart button */
 header menu {
 	display: flex;
 	gap: 1em;
@@ -130,22 +121,23 @@ header menu {
 	list-style-type: none;
 }
 
+/* stijlen van deze twee buttons */
 header menu li button {
 	border: none;
 	background-color: transparent;
-	/* dit moet op alle buttons!!! */
 	background: none;
 }
 
+/* de iconen van de buttons de juiste grootte geven */
 header menu li button img {
 	width: 1.2em;
 }
 
+/* het menu dat werkt als een carrousel */
 header nav.zichtbaar {
 	width: 100%;
 	border-top: .1em solid var(--basis-color);
 }
-
 
 header nav.zichtbaar ul {
 	display: flex;
@@ -153,8 +145,7 @@ header nav.zichtbaar ul {
 	gap: 1em;
 	list-style-type: none;
 	padding: 1em;
-	margin: 0;
-	
+	margin: 0;	
 }
 
 header nav.zichtbaar a {
@@ -162,22 +153,22 @@ header nav.zichtbaar a {
 	font-family:'Helvetica_Neue', sans-serif;
 }
 
-
+/* voor het hamburgen menu, hier moet ik nog naar kijken */
 nav.hamburgermenu {
 	position: fixed;
 	inset: 0;
 	translate: -100%;
 }
 
+/* stijlen van de zin over de shipping */
 section:nth-of-type(1) p {
 	background-color: var(--basis-color);
 	margin: 0;
 	padding:1em;
 	width:100%;
 	text-align:center;
-	color: white;
+	color: var(--kleur-text-wit);
 }
-
 
 /* code voor de carrousel van navigatie*/
 header nav {
@@ -195,7 +186,11 @@ header nav ul {
 }
 
 
-/* stijlen van de footer */
+
+
+/****************/
+/* FOOTER */
+/****************/
 footer {
 	font-family:'Helvetica_Neue_light', sans-serif;
 	color: var(--basis-color);
@@ -205,19 +200,20 @@ footer {
 	padding-top: 3em;
 }
 
-footer p:nth-of-type(1) {
-	text-align: center;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-}
-
+/* stijlen van het logo */
 footer img{
 	width: 25%;
 	display: block;
 	margin: auto;
 	height: auto;
-	align-items: center;
-	
+	align-items: center;	
+}
+
+/* stijlen van het email adress */
+footer p:nth-of-type(1) {
+	text-align: center;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 /* dropdown menu */
@@ -228,25 +224,28 @@ footer > ul {
 	position: relative;
 	display: inline-block;
 	width: 100%;
- }
- 
+}
+
+ /* stijlen van de buttons in het dropdown menu */
 footer ul li button  {
-	 width: 100%; 
-	 display: block;
-	 background-color: var(--kleur-achtergrond);
-	 font-family:'Helvetica_Neue_light', sans-serif;
-	 color: var(--basis-color);
-	 text-transform: uppercase;
-	 border-bottom: .1em solid var(--basis-color);
-	 border-top: .1em solid var(--basis-color);
-	 border-left: none;
-	 border-right: none;
-	 text-align: left;
-	 padding: .5em;
-	 margin: 0em;
-	 cursor: pointer;
+	width: 100%; 
+	display: block;
+	background-color: var(--kleur-achtergrond);
+	font-family:'Helvetica_Neue_light', sans-serif;
+	color: var(--basis-color);
+	text-transform: uppercase;
+	border-bottom: .1em solid var(--basis-color);
+	border-top: .1em solid var(--basis-color);
+	border-left: none;
+	border-right: none;
+	text-align: left;
+	padding: .5em;
+	margin: 0em;
+	/* krijg je een handje te zien ipv een muis icoon */
+	cursor: pointer;
  }
 
+ /* de ul die onder de button komt, de inhoud van de button*/
  footer ul ul {
     display: none;
     position: absolute;
@@ -258,43 +257,54 @@ footer ul li button  {
     color: var(--basis-color); 
 }
 
-/* footer ul li {
-    position: relative;
-} */
-
 footer ul ul li a {
     display: block;
-    padding: 0.1em;
+    padding: 0.4em;
     text-decoration: none;
     color: var(--basis-color);
 }
 
+/* titel van het fomulier */
 footer h2 {
  margin-left: 3em;
  text-align: left;
  padding-left: 0;
 }
 
+/* zin boven het fomulier */
 footer p:nth-of-type(2) {
-	margin-left: 3em;
+	margin-left: 3.2em;
 	text-align: left;
 }
 
+/* het formulier */
 footer form { 
 	display:flex; 
-	align-items:center; 
+	/* align-items:center;  */
+	justify-content: center;
 	gap:.5em;
 }
 
 footer form input:nth-of-type(1){ 
 	padding:.35em;
-	width:0; /* reset default width */
+	/* invoerveld zelf heeft geen breedte, 
+	de flex grow zorgt ervoor dat het invoerveld meeschaalt en alle breedte gebruikt */
+	width: 0; 
 	flex-grow:1;
 	background-color: var(--kleur-achtergrond);
 	border:solid .1em var(--basis-color);
-	margin-left: 2em;
+	margin-left: 1em;
 }
 
+/* het kleiner worden can het invoerveld bij een grotere width */
+@media (width > 45em) {
+	footer form input:nth-of-type(1){
+		width: 12em;
+		flex-grow: 0;
+	}
+}
+
+/* join button bij fomulier */
 footer form button{ 
 	padding:.35em;
 	margin-right: 2em;
@@ -303,6 +313,7 @@ footer form button{
 
 }
 
+/* nude project met copyright logo */
 footer p:nth-last-of-type(1){
 	color: var(--kleur-text-wit);
 	background-color: var(--basis-color);
@@ -313,3 +324,18 @@ footer p:nth-last-of-type(1){
 	margin-top: 7em;
 	font-size: .8em;
 }
+
+/* woorden/zinnen die niet te zien zijn, 
+maar wel handig zijn voor ee screenreader
+hiermee word deze content verborgen voor het oog, 
+maar niet overgeslagen door de screen reader */
+/* bron, https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+  }

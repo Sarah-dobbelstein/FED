@@ -201,7 +201,7 @@ main > h2 {
     white-space: nowrap;
 }
 
-@keyframes scroll-left {
+/* @keyframes scroll-left {
   0% {
       transform: translateX(0%);
   }
@@ -209,7 +209,7 @@ main > h2 {
   100% {
       transform: translateX(-100%);
   }
-}
+} */
 
 .Carrousel{
     position: relative;
