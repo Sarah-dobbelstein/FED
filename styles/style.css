@@ -18,17 +18,17 @@
 :root {
 	/* hier heb ik geklijk ook de dark mode in verwerkt*/
 	color-scheme: light dark;
-	--color-black:black;
-	--basis-color: light-dark(#452B1A, pink)  ;
+	--color-black:light-dark( black, white);
+	--basis-color: light-dark(#452B1A, rgb(238, 232, 232))  ;
 	--kleur-achtergrond: light-dark(white, black);
-	--kleur-shoppay: #5A31F4;
-	--kleur-text-wit: white;
+	--kleur-shoppay: light-dark( #5A31F4, #BCD1E8);
+	--kleur-text-wit: light-dark( white, black);
 	--kleuropties1: #7F412E;
 	--kleuropties2: #C7C8C9;
 	--kleuropties3: #F8F2C0;
 	--kleuropties4: #7B807C;
-	--carrouselbolletje: #BCD1E8;
-	--carrouselhover: #280b94; 
+	--carrouselbolletje: light-dark( #BCD1E8,black );
+	--carrouselhover: light-dark (#280b94,#BCD1E8); 
 
 
 
