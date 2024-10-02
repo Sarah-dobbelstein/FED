@@ -1,3 +1,39 @@
+/****************************************/
+/* menu openen en sluiten met de button */
+/****************************************/
+
+// bron voor menu https://codepen.io/shooft/pen/VwJXNEg?editors=1100
+
+// stap 1: zoek de menu-button op en sla die op in een variabele
+var MenuButton = document.querySelector("header button");
+
+
+// stap 2: laat de menu-button luisteren naar kliks en voer dan een functie uit
+MenuButton.onclick = HamburgerMenu;
+
+// stap 3: voeg in de functie een class toe aan de nav
+function HamburgerMenu() {  
+  // zoek de nav op
+  var deNav = document.querySelector(".hamburgermenu");
+  // voeg een class toe aan de nav
+  
+  // en verwijder die weer bij nogmaals klikken
+  // toggle
+  deNav.classList.toggle("toonMenu");
+
+// Log de huidige status van het menu (zichtbaar of verborgen)
+if (deNav.classList.contains("toonMenu")) {
+
+    } else {
+ 
+    }
+}
+
+
+/****************************************/
+/* dropdown menu in de footer */
+/****************************************/
+// bron voor de dropdown  https://www.w3schools.com/howto/howto_js_dropdown.asp bron voor de dropdown/
 // Zoek alle buttons binnen de footer ul
 const buttons = document.querySelectorAll('footer > ul > li > button');
 
@@ -27,6 +63,10 @@ window.addEventListener('click', function(event) {
         });
     }
 });
+
+/****************************************/
+/* dropdown menu met info over item */
+/****************************************/
 
 // Zoek alle buttons binnen de main in de 2e section
 const buttoninfo = document.querySelectorAll('main section:nth-of-type(2) ul li button');
@@ -59,66 +99,6 @@ window.addEventListener('click', function(event) {
 });
 
 
-// https://www.w3schools.com/howto/howto_js_dropdown.asp bron voor de dropdown/
 
 
-/*******************************/
-/* AUTO SCROLLEN van carrousel */
-/*******************************/
-
-// const carrousel = document.getElementById('CarrouselAutoScroll');
-// const autoScrollInterval = 30; // Tijd in milliseconden tussen het scrollen
-// let AutoScrollTimer;
-
-//   //////////////////////////////////
-//   // naar volgende/vorige element //
-//   function goToElement(direction) {
-// 		// het huidige current element opzoeken
-// 		let currentElement = carrousel.querySelector(":scope > ul > .current");
-
-// 		let newElement;
-// 		if (direction == "previous") {
-// 			// het nieuwe element is het vorige broertje/zusje
-// 			newElement = currentElement.previousElementSibling;
-// 			// checken of nieuwe element bestaat - anders naar laatste
-// 			if (!newElement) {
-// 				newElement = carrousel.querySelector(":scope > ul > li:last-of-type");
-// 			}
-// 		} else {
-// 			// het nieuwe element is het volgende broertje/zusje
-// 			newElement = currentElement.nextElementSibling;
-// 			// checken of nieuwe element bestaat - anders naar eerste
-// 			if (!newElement) {
-// 				newElement = carrousel.querySelector(":scope > ul > li:first-of-type");
-// 			}
-// 		}
-
-// 		// naar het nieuwe element scrollen
-// 		scrollToElement(newElement);
-//   }
-
-// function AutoScroll() {
-//     // de class "autoScrolling" toevoegen aan de carrousel
-//     carrousel.classList.add("autoScrolling");
-    
-//     // een timer aanzetten
-//     AutoScrollTimer = setInterval(function(){
-//       // als de timer afgaat naar het volgende element gaan
-//       goToElement("next");
-//     }, autoScrollInterval);
-   
-//   }
-
-//   // Functie om de carrousel op te zetten (je kunt deze uitbreiden)
-// function createCarrousel(id) {
-//     const carrouselElement = document.getElementById(id);
-//     // Hier kun je logica toevoegen om de carrousel op te zetten
-// }
-
-//   (function() {
-//     // hier de id gebruiken van de section in de html
-//     createCarrousel("CarrouselAutoScroll");
-//     AutoScroll();
-//     //je kunt hier ook meerdere carrousellen activeren
-//   })();
 

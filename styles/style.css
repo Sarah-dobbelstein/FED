@@ -1,4 +1,10 @@
 /**************/
+/* algemenen css */
+/**************/
+
+
+
+/**************/
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
@@ -20,7 +26,11 @@
 	--kleuropties1: #7F412E;
 	--kleuropties2: #C7C8C9;
 	--kleuropties3: #F8F2C0;
-	--kleiropties4: #7B807C;
+	--kleuropties4: #7B807C;
+	--carrouselbolletje: #BCD1E8;
+	--carrouselhover: #280b94; 
+
+
 
 }
 
@@ -76,7 +86,7 @@ a {
 
 
 /****************/
-/* HEADER */
+/*    HEADER    */
 /****************/
 
 /* In de les gedaan*/
@@ -85,6 +95,13 @@ header {
 	flex-wrap:wrap;
 	align-items:center;
 	justify-content: space-between;
+	/* zorg ervoor de de header boven aan de pagina blijft */
+	position: fixed; 
+	 /*header is boven aan de pagina  */
+	top: 0;           
+	width: 100%;
+	z-index: 1000;   
+	background-color: var(--kleur-achtergrond);
 }
 
 /* vw is een andere eenheid dan em */
@@ -110,7 +127,60 @@ header button {
 	border: none;
 	background-color: transparent;
 	background: none;
+	cursor: pointer;
 }
+
+.hamburgermenu ul { 
+	margin:0; 
+	margin-top: 8em;
+	padding:4em 1em 0;
+	list-style:none;
+	display:flex;
+	flex-direction: column;
+	background:var(--kleur-achtergrond);
+	color: var(--basis-color);
+	
+	
+	/* JOUW CODE HIER - stap 1 */
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	
+	/* JOUW CODE HIER - stap 2 */
+   translate:-100% 0%;
+	
+	/* JOUW CODE HIER - stap 4 */
+	transition:translate .3s;
+  }
+
+  /* als menu open is */
+.hamburgermenu.toonMenu ul {
+	/* JOUW CODE HIER - stap 4 */
+	translate:0% 0%;
+  }
+
+.hamburgermenu ul li {
+padding: 0;
+margin-top: .3em;
+
+}
+
+.hamburgermenu ul li a {
+	color: var(--basis-color);
+}
+
+.hamburgermenu ul li button {
+	color: var(--basis-color);
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.toonMenu {
+	display: block;
+  }
 
 /* hierin zitten de zoek button en de cart button */
 header menu {
@@ -119,6 +189,7 @@ header menu {
 	margin: 0;
 	padding: 1em;
 	list-style-type: none;
+	
 }
 
 /* stijlen van deze twee buttons */
@@ -126,6 +197,7 @@ header menu li button {
 	border: none;
 	background-color: transparent;
 	background: none;
+
 }
 
 /* de iconen van de buttons de juiste grootte geven */
@@ -145,19 +217,16 @@ header nav.zichtbaar ul {
 	gap: 1em;
 	list-style-type: none;
 	padding: 1em;
-	margin: 0;	
+	padding-top: .3em;
+	padding-bottom: .3em;
+	margin: 0;
+	border-bottom: .1em solid var(--basis-color);
+
 }
 
 header nav.zichtbaar a {
 	color: var(--basis-color);
 	font-family:'Helvetica_Neue', sans-serif;
-}
-
-/* voor het hamburgen menu, hier moet ik nog naar kijken */
-nav.hamburgermenu {
-	position: fixed;
-	inset: 0;
-	translate: -100%;
 }
 
 /* stijlen van de zin over de shipping */
@@ -183,10 +252,17 @@ header nav ul {
 	flex-shrink: 0;	
 	font-size: 1em;
 	line-height: 2em;
+	
+
 }
 
-
-
+/****************/
+/* body */
+/****************/
+/* zorg er voor de header niet een deel van de pagina overlapt */
+ body {
+	padding-top: 8em;
+}
 
 /****************/
 /* FOOTER */
@@ -201,7 +277,7 @@ footer {
 } 
 
 /* stijlen van het logo */
-footer img{
+footer a img{
 	width: 25%;
 	display: block;
 	margin: auto;
@@ -214,6 +290,22 @@ footer p:nth-of-type(1) {
 	text-align: center;
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
+}
+
+footer section{
+	display: flex;
+	justify-content: center;	
+}
+
+footer section ul {
+	list-style-type: none;
+	width: 40%;
+	display: flex;
+	padding: 0
+}
+
+footer section ul li img {
+width: 80% ;
 }
 
 /* dropdown menu */
@@ -235,7 +327,6 @@ footer ul li button  {
 	color: var(--basis-color);
 	text-transform: uppercase;
 	border-bottom: .1em solid var(--basis-color);
-	/* border-top: .1em solid var(--basis-color); */
 	border-left: none;
 	border-right: none;
 	text-align: left;

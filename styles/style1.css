@@ -1,10 +1,19 @@
-/* Video moet mee schalen*/
+/****************/
+/* css pagina 1 */
+/****************/
+
+/* Video in het begin moet mee schalen*/
 video{
 	width: 100%;
 	height: auto;
 }
 
-/* Grid voor de artikelen*/ 
+
+/**********************/
+/* grid met artikelen */
+/**********************/
+/* de sectie relatief maken zodat het kind, 
+de view all rechts kan komen te staan*/ 
 section:nth-of-type(3){
     position: relative;
 }
@@ -17,8 +26,10 @@ section:nth-of-type(3) article a{
     
 }
 
+/* en lijst als grid weergeven */
 section:nth-of-type(3) > ul{
 	display: grid;
+  /* grid bestaat uit 2 kolommen */
 	grid-template-columns: 1fr 1fr;
 	gap: 1em;
   list-style-type: none;
@@ -27,29 +38,30 @@ section:nth-of-type(3) > ul{
   padding: 0;
 }
 
+/* als het scherm breder is bestaat het grid uit 4 kolommen */
 @media (width > 55em){
 	section:nth-of-type(3) ul {
         grid-template-columns:repeat(4, 1fr);
 	}
 }
 
-/*  uit de grid per artikel les gehaald */
+/*  uit de grid per artikel les gehaald 
+bron, https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20grid.pdf
+ik heb hierbij naar oefening 4 gekeken*/
 section:nth-of-type(3) > ul > li{
-	/* de cards hebben een verhouding van 2 breed bij 4 hoog */
-  /* mits de content dat toestaat */
   display:grid;
   /* 2 kolommen */
   /* de tweede is zo breed als de plus button */
   /* de eerste krijgt de rest van de ruimte */
   /* de verschillende kleur opties staan links in de kolom */
+  /* verhouding van 2 breed (columns) bij 4 hoog (rows)  */
   grid-template-columns:auto min-content;
-  /* 3 rijen */
+  /* 4 rijen */
   /* alle rijen zijn zo hoog als de content */
-  grid-template-rows: min-content min-content min-content min-content min-content;
-  /* row-gap:  0;em;  waarom moet dit weg?? VRAGEN*/ 
+  grid-template-rows: min-content min-content min-content min-content min-content; 
 }
 
-/* voor de titel */
+/* voor de titel van artikel*/
 section:nth-of-type(3) > ul > li a:nth-of-type(1) {
   /* grid-area: row-start / column-start / row-end / col-end */
   grid-area: 3 / 1 / 4 / 2 ;
@@ -78,19 +90,18 @@ section:nth-of-type(3) > ul > li p:nth-of-type(1) {
 
 /* voor de kleuren lijst */
 section:nth-of-type(3) ul ul{
-    /* aspect-ratio: 1; */
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: .3em;
-    padding-left: 0em;
-    /* grid-area: row-start / column-start / row-end / col-end */
-    grid-area: 5 / 1 / 6 / 2;
-    margin: 0;     
-    /* width: 5px;  */
+  list-style-type: none;
+  display: flex;
+  /* zo komen de bolletjes naast elkaar te staan */
+  align-items: center;
+  gap: .3em;
+  padding-left: 0em;
+  /* grid-area: row-start / column-start / row-end / col-end */
+  grid-area: 5 / 1 / 6 / 2;
+  margin: 0;     
 }
  
-
+/* stijlen van de kleuren bolletjes zelf */
 section:nth-of-type(3) ul ul li a {
   display:block;
   width:1em;
@@ -107,18 +118,22 @@ section:nth-of-type(3) ul ul li:nth-last-child(1){
  border: none;
 }
 
+/* stijlen van eerste bolletje */
 section:nth-of-type(3) ul ul li:nth-of-type(1) a {
   background-color: var(--kleuropties1);
 }
 
+/* stijlen van tweede bolletje */
 section:nth-of-type(3) ul ul li:nth-of-type(2) a {
   background-color: var(--kleuropties2);
 }
 
+/* stijlen van derde bolletje */
 section:nth-of-type(3) ul ul li:nth-of-type(3) a {
   background-color: var(--kleuropties3);
 }
 
+/* stijlen van vierde bolletje */
 section:nth-of-type(3) ul ul li:nth-of-type(4) a {
   background-color: var(--kleuropties4);
 }
@@ -127,6 +142,7 @@ section:nth-of-type(3) ul ul li:nth-of-type(4) a {
 section:nth-of-type(3) ul li p:nth-of-type(2) {
   /* grid-area: row-start / column-start / row-end / col-end */
   grid-area: 1 / 1 / 2 / 2;
+  /* de achtergrond moet wit zijn */
   background-color: var(--kleur-achtergrond);
   width: 4em;
   margin-left: .6em;
@@ -139,219 +155,235 @@ section:nth-of-type(3) ul li button {
   height: 2em;
   border: none;
 	background-color: transparent;
-	/* dit moet op alle buttons!!! */
 	background: none;
-  align-self:center; /* verticaal midden */
+  /* verticaal midden */
+  align-self:center; 
 }
 
-
-main section:nth-of-type(3) img {
+/* stijlen van de image hij mag de gehele ruimte binnen het grid gebruiken */
+section:nth-of-type(3) img {
   width: 100%;
-   display:grid;
-  grid-template-columns:1fr 1fr;
 }
 
-/* Grid voor foto's van de collecties*/
+
+
+/**********************/
+/* grid met collecties */
+/**********************/
+/* de lijst alvast in een grid zetten */
+/* bron hiervoor https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20grid.pdf 
+hierbij heb ik naar oefening 1 gekeken */
 section:nth-of-type(4) ul{
-    display: grid;
-	  grid-template-columns: 1fr 1fr;
-	  gap:1em;
-    list-style-type: none;
-    margin: 0;
-    padding: .7em;
-    
+  /* grid bestaat uit 2 kolommen */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1em;
+  list-style-type: none;
+  margin: 0;
+  padding: .7em;  
 }
 
+/* de foto's kunnen de gehele ruimte gebruiken binnen het grid */
 section:nth-of-type(4) img{
-    display:block;
-    width:100%;
+  display:block;
+  width:100%;
 }
 
+/* het 3e item binnen de lijst (de 3e foto) mag over 2 kolommen staan
+hij neemt zo de hele breedte in */
 section:nth-of-type(4) li:nth-of-type(3){
 	grid-column:span 2;
 }
 
-section:nth-of-type(4) li:nth-of-type(4) {
+/* het 4e item mag ook de gehele breedte van het scherm gebruike */
+section:nth-of-type(4) li:nth-of-type(4){
+  /* van het begin tot het einde */
 	grid-column:1/-1;
   width: 100%;
-	margin: 0 em;
+	margin: 0em;
   padding: 0em;
 }  
 
+/* als het scherm breder wordt, 
+moet de 3e foto bij de eeste 2 foto's in een extra kolom komen te staan */
 @media (width > 55em){
 	section:nth-of-type(4) ul {
-        grid-template-columns:repeat(3, 1fr);
+    /* er zijn nu 3 kolommen */
+    grid-template-columns:repeat(3, 1fr);
 	}
+
   section:nth-of-type(4) li:nth-of-type(3){
+    /* de 3e foto komt in de laate kolom te staan (begint bij 3 eindigd bij 4)*/
     grid-column:3/4;
   }
 }
 
 
-/* code voor de carrousel van de verschillende locaties*/
+/**********************/
+/* carrousel locaties */
+/**********************/
+/* bron die ik hiervoor heb gebruikt
+https://codepen.io/shooft/pen/yLKjzWa
+ik heb naar Bolletjes & Auto scroll hiervoor gebruikt */
+
 /* code voor de tekst our stores*/
-
-main section:nth-last-of-type(5) {
-  overflow: hidden;
-  animation: var(--direction) var(--marquee-speed) linear infinite;
-}
-
 main > h2 {
   display: flex;
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
-/* @keyframes scroll-left {
-  0% {
-      transform: translateX(0%);
-  }
-
-  100% {
-      transform: translateX(-100%);
-  }
-} */
-
+/* hier spreek ik de sectie aan waar de carrousel in zit */
 .Carrousel{
-    position: relative;
+  position: relative;
 }
 
 .Carrousel > ul { 
   margin: 0; padding: 0;
   list-style: none;
 	display: flex;
-	
+
 	/* handmatig scrollen is mogelijk */
 	overflow: hidden;
 	
 	/* snappen als er gescrolled wordt - andere helft bij li */
   scroll-snap-type: inline mandatory;
   
-  /* smooth als met js gescrolled wordt */
+  /* een mooie transitie als er op een bolletje geklikt wordt */
 	scroll-behavior: smooth;
   
-  /* scrollbar zoveel mogelijk verbergen */
+  /* scrollbar verbergen */
   -webkit-overflow-scrolling: touch; /* voor iOS*/
   -ms-overflow-style: none; /* voor IE */
 	scrollbar-width: none; /* voor firefox */
 }
 
+  /* scrollbar verbergen */
 .Carrousel > ul::-webkit-scrollbar {
-  /* scrollbar zoveel mogelijk verbergen */
   display: none; /* voor chrome, safari en edge*/
 }
 
 .Carrousel > ul li {
-    flex-basis: 100%;
-    flex-shrink: 0;
-    /* snappen als er gescrolled wordt - andere helft bij ul */
-      scroll-snap-align:center;
-      display: flex;
-      flex-direction: column;
-      height: 50vh;
+  flex-basis: 100%;
+  /* het list item krimpt niet */
+  flex-shrink: 0;
+  /* overgenomen uit de oefening */
+  /* snappen als er gescrolled wordt - andere helft bij ul */
+  scroll-snap-align:center;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
 }
 
+/* images die in de carrousel worden weergegeven */
 .Carrousel > ul li > img {
-    display: block;
-    width: 100%;
-    height: 100%;
-     /* om het plaatje in te laten zoomen */
-    object-fit: cover;
-    order: -1;
-    
+  display: block;
+  /* gebruik de hele breedte van de pagina */
+  width: 100%;
+  height: 100%;
+  /* om het plaatje in te laten zoomen */
+  object-fit: cover;
+  /* het plaatje staat boven aan op de site, maar onder in de html */
+  order: -1;  
 }
 
+/* als de breedte minder wordt,  */
 @media (width > 30em) {
   .Carrousel > ul li {
   height: auto;
   } 
 }
 
+/* stijlen van de tekst onder het plaatje */
 .Carrousel > ul li article {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
 }
 
-
-
+/* stijlen van de bolletjes */
 .Carrousel nav ul {
-    position: absolute;
-      left: 2em; right: 2em;
-      bottom: 0;
-    padding: 0 0 .5em;
-    padding-bottom: 5em;
-    list-style: none;
-      display: flex;
-  /* 	flex-wrap:wrap; */
-    justify-content: center;
-    gap:.1em;
-  }
+  position: absolute;
+    /* positie van de ul */
+  left: 2em; right: 2em;
+  bottom: 0;
+  /* zorgen dat het in het midden komt te staan */
+  padding: 0 0 .5em;
+  padding-bottom: 5em;
+  list-style: none;
+  display: flex;
+  /* in het midden van de carrousel en op een rij*/
+  justify-content: center;
+  gap:.1em;
+}
   
-  /* een bolletje container */
-  .Carrousel > nav li {
-      flex-basis: 1.2em;
-      aspect-ratio: 1/1;
-
-  }
+/* de bolletjes container */
+.Carrousel > nav li {
+  /* elke container van een bollejte een breedte van 1.2 em */
+  flex-basis: 1.2em;
+  /* breedte en hoogte zijn gelijk */
+  aspect-ratio: 1/1;
+}
   
-  /* de bolletjes */
-  .Carrousel > nav a {
-    display: block;
-    width:40%;
-    height:40%;
-      
-    /*nog veranderen naar juiste kleur*/
-    text-decoration: none;
-      color: black;
-    background-color: white;
-      border-radius: 50%;
-    outline: none;
-      box-shadow: inset 0 0 0 1px currentColor;
-    
-    transition: 0.5s;
-  }
+/* de bolletjes */
+.Carrousel > nav a {
+  display: block;
+  width:40%;
+  height:40%; 
+  /*nog veranderen naar juiste kleur*/
+  text-decoration: none;
+  background-color: var(--carrouselbolletje);
+  /* bolletje is rond */
+  border-radius: 50%;
+  outline: none;
+  /* verandering verlopen soepel (hover etc) */
+  transition: 0.5s;
+}
 
+/* bij hoveren of tabben krijgt bollete een andere kleur */
 .Carrousel > nav a:hover,
 .Carrousel > nav a:focus {
-    /*nog veranderen naar juiste kleur alleen de border veranderd vankleur*/
-  color: blue;
+  background-color: var(--carrouselhover);
 
 }
-
-/* klopt dit?? nakijken */
-.Carrousel > nav a.current {
-  background-color: currentColor;
-}
-
 
   
    
-/* code voor de carrousel van plaatjes*/
-
+/******************************/
+/* scroll carrousel */
+/******************************/
+/* bron 
+https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20flexbox.pdf
+hierbij heb ik naar oefening 13 gekeken */
 main section:nth-of-type(7) ul:nth-of-type(1) {
-    display: flex;
-    overflow-x: auto;
-    gap: 1em;
-    list-style: none;
-	  padding: 0;
-    scrollbar-width: none; /* Voor Firefox */
-    -ms-overflow-style: none; /* Voor Internet Explorer en Edge */
+  /* elementen komen in een rij te staan */
+  display: flex;
+  /* elementen die er niet op passen snappen */
+  overflow-x: auto;
+  /* ruimte tussende foto's */
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  /* geen scroll bar */
+  scrollbar-width: none; /* Voor Firefox */
+  -ms-overflow-style: none; /* Voor Internet Explorer en Edge */
 }
 
 main section:nth-of-type(7) ul:nth-of-type(1) li {
+  /*zo wordt het mogelijk om de shop link in het midden van eht plaatje te zetten */
   position: relative;
-  /*  zo wordt het mogelijk om de shop link in het midden van eht plaatje te zetten */
 }
 
-
+/* stijlen van de foto's */
 main section:nth-of-type(7) ul:nth-of-type(1) img {
-	display: flex;
-    width: 20em;
+  width: 20em;
 } 
 
+/* shop link stijlen */
 main section:nth-of-type(7) ul:nth-of-type(1) a:nth-of-type(2) {
+  /* is alleen te zijn bij hoveren */
   opacity: 0;
   position: absolute;
+  /* in het midden van de image */
   top:50%;
   left: 40%;
   border: .1em solid var(--basis-color);
@@ -361,48 +393,46 @@ main section:nth-of-type(7) ul:nth-of-type(1) a:nth-of-type(2) {
   padding: .5em;
 }
 
-/* bij hoveren */
+/* img bij hoveren */
 main section:nth-of-type(7) ul:nth-of-type(1) img:hover {
-    opacity: 0.4;
-    /* zorg voorde witte gloed over de img */
+  /* zorgt voorde witte gloed over de img */
+  opacity: 0.4;  
 } 
 
+/* shop link bij hoveren */
 main section:nth-of-type(7) ul:nth-of-type(1) li:hover a:nth-of-type(2) {
+  /* shop link is nu wel te zien */
   opacity: 1;
-
 }
-
- 
-
 
 /* zinnen die afwisselen boven de footer */
 main section:nth-of-type(7) ul:nth-of-type(2){
 	display: block;
 	margin: auto;
 	height: auto;
-	align-items: center;
+  /* text is uitgelijnd in het midden */
   text-align: center;
   list-style-type: none;
-  /* font-size: 1.7em; */
-  
 }
 
 /* plaatjes van verschillende merken */
 main section:nth-of-type(8) ul {
   list-style-type: none;
+  /* komen naast elkaar te staan */
   display: flex;
+  /* als het niet meer past komen ze eronder */
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 1em;
   padding: 0;
-
 }
 
+/* padding om de plaatjes heen */
 main section:nth-of-type(8) ul li {
   padding: 1em;
-
 }
 
+/* de breedte van de plaatjes */
 main section:nth-of-type(8) ul li img {
   width: 5em;
 }

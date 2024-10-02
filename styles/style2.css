@@ -1,287 +1,340 @@
+/****************/
+/* css pagina 2 */
+/****************/
+
+
+/*************************/
+/* carrousel van artikel */
+/*************************/
+/* de carrousel van het item */
 section:nth-of-type(1) article {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  /* zet de foto's naast elkaar */
+  flex-direction: column;
 }
+
+/* de lijst met foto's stijlen*/
 section:nth-of-type(1) article ul{
  display: block;
+ /* de foto's komen boven aan */
  order: -1;
  margin: 0;
  list-style: none;
  display: flex;
  overflow: hidden;
  scroll-snap-type: inline mandatory;
+ /* transities verlopen soepel */
  scroll-behavior: smooth;
  -webkit-overflow-scrolling: touch;
  -ms-overflow-style: none;
+ /* gee nscrollbar te zien */
  scrollbar-width: none;
 }
 
-section:nth-of-type(1) article p{
-    display: block;
-    background-color: var(--kleur-achtergrond);
-    color: var(--basis-color);
-    text-align: left;
-    padding-top: 0em;
-    order: 0;
-   }
-
-
+/* img van de items */
 section:nth-of-type(1) img {
-    /* display: block; */
-    width: 100%;
-    /* order: -1; */
-
+  width: 100%;
 }
-
-
-
-
-/* voor het stijlen van de kleur opties van de hoodie */
-section:nth-of-type(1) > ul{
-    display: flex;
-    align-items: center;
-    width: 65%;
-    gap: .5em;
-    margin-left: .5em;
-    border-top: .01em solid var(--basis-color);
-    border-bottom: .01em solid var(--basis-color);
-    list-style-type: none;
-    padding: 0em;
-   }
-   
-
-
-/* voor het stijlen van de maat opties van de hoodie */
-section:nth-of-type(1) > ol{
-    display: flex;
-    align-items: center;
-    width: 80%;
-    margin-left: .5em;
-    border-bottom: .01em solid var(--basis-color);
-    padding: 0;
-    list-style-type: none;
-}
-
-/* voor het stijlen van de maat buttons */
-section:nth-of-type(1) ol button {
-    margin: 1em;
-	font-size: 1em;
-	width: 1.2em;
-	border: none;
-    padding-left: 0;
-    text-align: left;
-	background-color: transparent;
-	background: none;
-}
-
-/* stijlen van de buttons */
-/* size button */
-main button:nth-of-type(1) {
-    margin: 1em;
-	font-size: 1em;
-	width: 50%;
-	border: none;
-    padding-left: 0;
-    text-align: left;
-	background-color: transparent;
-    background: none; 
-    cursor: pointer;  
-}
-
-/* add to cart button */
-main button:nth-of-type(2) {
-    display: flex;
-	font-size: 1em;
-	width: 95%;
-    justify-self: center;
-    justify-content: center;
-	border: none;
-	background-color: var(--basis-color);
-    cursor: pointer;  
-    color: var(--kleur-achtergrond);
-    padding-bottom: 1em;
-    padding-top: 1em;
-    text-transform: uppercase;
-}
-
-/* shoppify button */
-main section:nth-of-type(1) > a {
-    display: block;
-	font-size: 1em;
-	border: none;
-    text-align: center;
-	background-color: var(--kleur-shoppay);
-    cursor: pointer;  
-    color: var(--kleur-achtergrond);
-    padding-bottom: 1em;
-    padding-top: 1em;
-    text-transform: uppercase;
-    text-underline-offset: none;
-    width: 95%;
-}
-
-main p:nth-of-type(1) {
-    background-color: transparent;
-    background: none; 
-    color: var(--basis-color);
-    width: 100%;  
-    text-align: left;
-    text-transform: lowercase;
-}
-
-main section:nth-of-type(2) img {
-    width: 90%;
-    margin: 1em;
-}
-
-main section:nth-of-type(2) ul {
-    list-style-type: none;
-    margin: 0em;
-    padding-left: 0;
-}
-
-/* de buttons voor meer info over het product */
-main section:nth-of-type(2) ul li button {
-    width: 100%;
-    display: block;
-    background-color: var(--kleur-achtergrond);
-    font-family: 'Helvetica_Neue_light', sans-serif;
-    color: var(--basis-color);
-    text-transform: uppercase;
-    border-bottom: .1em solid var(--basis-color);
-    border-top: .1em solid var(--basis-color);
-    border-left: none;
-    border-right: none;
-    text-align: left;
-    padding: .5em;
-    margin: 0;
-    margin-left: 0;
-    cursor: pointer;
-}
-
-/* de info die onder de buttons komt te staan */
-main section:nth-of-type(2) ul li p {
-    display: none;
-    position: absolute;
-	width: 100%;
-    margin: 0em;
-    padding: 1em;
-    list-style: none;
-    background-color: var(--kleur-achtergrond); /* Zorg ervoor dat de achtergrond zichtbaar is */
-    color: var(--basis-color); 
-    z-index: 1;
-}
-
-/* de image die onder de buttons komt te staan */
-main section:nth-of-type(2) ul li img {
-    display: none;
-    position: absolute;
-	width: 100%;
-    margin: 0em;
-    padding: 1em;
-    list-style: none;
-    background-color: var(--kleur-achtergrond); /* Zorg ervoor dat de achtergrond zichtbaar is */
-    color: var(--basis-color);
-    z-index: 1; 
-}
-
 
 /* carrousel voor de twee plaatjes van het item */
 .clothes{
-    position: relative;
+  position: relative;
 }
 
 .clothes > ul { 
   margin: 0; padding: 0;
   list-style: none;
 	display: flex;
-	
+
 	/* handmatig scrollen is mogelijk */
 	overflow: hidden;
 	
 	/* snappen als er gescrolled wordt - andere helft bij li */
   scroll-snap-type: inline mandatory;
   
-  /* smooth als met js gescrolled wordt */
+  /* soepele overgangen */
 	scroll-behavior: smooth;
   
-  /* scrollbar zoveel mogelijk verbergen */
+  /* scrollbar verbergen */
   -webkit-overflow-scrolling: touch; /* voor iOS*/
   -ms-overflow-style: none; /* voor IE */
 	scrollbar-width: none; /* voor firefox */
 }
 
 .clothes > ul::-webkit-scrollbar {
-  /* scrollbar zoveel mogelijk verbergen */
+  /* scrollbar verbergen */
   display: none; /* voor chrome, safari en edge*/
 }
 
 .clothes > ul li {
-    flex-basis: 100%;
-    flex-shrink: 0;
-    /* snappen als er gescrolled wordt - andere helft bij ul */
-      scroll-snap-align:center;
-      display: flex;
-      flex-direction: column;
+  flex-basis: 100%;
+  /* het list item krimpt niet */
+  flex-shrink: 0;
+  /* overgenomen uit de oefening */
+  /* snappen als er gescrolled wordt - andere helft bij ul */
+  scroll-snap-align:center;
+  display: flex;
+  flex-direction: column;
 }
 
+/* images die in de carrousel worden weergegeven */
 .clothes > ul li > img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    /* waarom zoomt het plaatje niet in */
-    order: -1;
-    
+  display: block;
+  /* gebruik de hele breedte van de pagina */
+  width: 100%;
+  height: auto;
 }
 
-/* .clothes > ul li article {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-} */
-
+/* stijlen van de bolletjes */
 .clothes nav ul {
-    position: absolute;
-      left: 2em; right: 2em;
-      bottom: 0;
-    padding: 0 0 .5em;
-    padding-bottom: 5em;
-    list-style: none;
-      display: flex;
-  /* 	flex-wrap:wrap; */
-    justify-content: center;
-    gap:.1em;
-  }
+  position: absolute;
+     /* positie van de ul */
+  left: 2em; right: 2em;
+  bottom: 0;
+   /* zorgen dat het in het midden komt te staan */
+  padding: 0 0 .5em;
+  padding-bottom: 5em;
+  list-style: none;
+  display: flex;
+  /* in het midden van de carrousel en op een rij*/
+  justify-content: center;
+  gap:.1em;
+}
   
-  /* een bolletje container */
-  .clothes > nav li {
-      flex-basis: 1.2em;
-      aspect-ratio: 1/1;
-  }
+/* de bolletjes container */
+.clothes > nav li {
+  /* elke container van een bollejte een breedte van 1.2 em */
+  flex-basis: 1.2em;
+  /* breeddt is hetzelfde als de hoogte */
+  aspect-ratio: 1/1;
+}
   
-  /* de bolletjes */
-  .clothes > nav a {
-    display: block;
-    width:40%;
-    height:40%;  
-    /*nog veranderen naar juiste kleur*/
-    text-decoration: none;
-      color: black;
-    background-color: white;
-      border-radius: 50%;
-    outline: none;
-      box-shadow: inset 0 0 0 1px currentColor;
-    
-    transition: 0.5s;
-  }
+/* de bolletjes */
+.clothes > nav a {
+  display: block;
+  width:40%;
+  height:40%; 
+  /*nog veranderen naar juiste kleur*/
+  text-decoration: none;
+  background-color: var(--carrouselbolletje);
+  /* bolletje is rond */
+  border-radius: 50%;
+  outline: none;
+  /* verandering verlopen soepel (hover etc) */
+  transition: 0.5s;
+}
 
-/* Grid voor de artikelen*/ 
+/* bij hoveren of tabben krijgt bollete een andere kleur */
+.Carrousel > nav a:hover,
+.Carrousel > nav a:focus {
+  background-color: var(--carrouselhover);
+
+}
+
+
+/***************/
+/* info artikel */
+/***************/
+
+/* de prijs */
+section:nth-of-type(1) article p{
+  display: block;
+  background-color: var(--kleur-achtergrond);
+  color: var(--basis-color);
+  text-align: left;
+  padding-top: 0em;
+  /* komt onder de plaatjes */
+  order: 0;
+}
+
+/* voor het stijlen van de kleur opties van de hoodie */
+main section:nth-of-type(1) > ul{
+  display: flex;
+  /* komen op een rij te staan */
+  align-items: center;
+  width: 65%;
+  /* ruimte tussen de foto's */
+  gap: .5em;
+  margin-left: .5em;
+  border-top: .01em solid var(--basis-color);
+  border-bottom: .01em solid var(--basis-color);
+  list-style-type: none;
+  padding: 0em;
+  cursor: pointer;
+}
+   
+/* voor het stijlen van de maat opties van de hoodie */
+section:nth-of-type(1) > ol{
+  display: flex;
+  /* komen op een rij te staan */
+  align-items: center;
+  width: 80%;
+  margin-left: .5em;
+  border-bottom: .01em solid var(--basis-color);
+  padding: 0;
+  list-style-type: none;
+}
+
+/* voor het stijlen van de maat buttons */
+section:nth-of-type(1) ol button {
+  /* ruimte tussen de buttons */
+  margin: 1em;
+	font-size: 1em;
+	width: 1.2em;
+	border: none;
+  padding-left: 0;
+  text-align: left;
+	background-color: transparent;
+	background: none;
+  cursor: pointer; 
+}
+
+/* what is my size buttons */
+main button:nth-of-type(1) {
+  margin: 1em;
+	font-size: 1em;
+	width: 50%;
+	border: none;
+  padding-left: 0;
+  text-align: left;
+	background-color: transparent;
+  background: none; 
+  cursor: pointer;  
+}
+
+/* add to cart button */
+main article:nth-of-type(2) button {
+  /* button in eht midden */
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  width: 95%;
+  margin-bottom: 0em;
+  border: none;
+  /* kleur van de button */
+  background-color: var(--basis-color);
+  cursor: pointer;  
+  /* kleur van de tekst */
+  color: var(--kleur-text-wit);
+  padding-bottom: 1em;
+  padding-top: 1em;
+  text-transform: uppercase;
+}
+
+/* shoppify button */
+main article:nth-of-type(2) > a {
+  /* tekst moet in het midden */
+  text-align: center;
+  font-size: 1em;
+  border: none;
+  /* kleur van de button */
+  background-color: var(--kleur-shoppay);
+  cursor: pointer; 
+  /* kleur van de tekst */
+  color: var(--kleur-text-wit);
+  padding-bottom: 1em; 
+  padding-top: 1em; 
+  margin: 1em;
+  text-transform: uppercase;
+  /* geen onderlijning voor de tekst */
+  text-decoration: none;
+  width: 95%;
+}
+
+/* voor de zin met het klarna logo ervoor */
+main article:nth-of-type(3) {
+  display: flex;
+  /* items komen op een rij te staan */ 
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* klarna logo moet als eerste komen */
+main article:nth-of-type(3) img {
+  width: 4em;
+  order: -1;
+}
+
+/* de zin naast klarna logo */
+main p:nth-of-type(1) {
+  background-color: var(--kleur-achtergrond); 
+  color: var(--basis-color);
+  width: 100%;  
+  text-align: left;
+  text-transform: lowercase;
+}
+
+/* de lijst met meer info over het product */
+main section:nth-of-type(2) ul {
+  list-style-type: none;
+  margin: 0em;
+  padding-left: 0;
+}
+
+/* de buttons voor meer info over het product */
+main section:nth-of-type(2) ul li button {
+  width: 100%;
+  display: block;
+  background-color: var(--kleur-achtergrond);
+  /* de letters zijn niet dik gedrukt */
+  font-family: 'Helvetica_Neue_light', sans-serif;
+  color: var(--basis-color);
+  text-transform: uppercase;
+  border-bottom: .1em solid var(--basis-color);
+  border-top: .1em solid var(--basis-color);
+  border-left: none;
+  border-right: none;
+  /* tekst staat links */
+  text-align: left;
+  padding: .5em;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* https://www.w3schools.com/howto/howto_js_dropdown.asp bron voor de dropdown */
+/* de info die onder de buttons komt te staan in de dropdown */
+main section:nth-of-type(2) ul li p {
+  display: none;
+  position: absolute;
+  width: 100%;
+  margin: 0em;
+  padding: 1em;
+  list-style: none;
+  /* Zorgt ervoor dat de achtergrond zichtbaar is */
+  background-color: var(--kleur-achtergrond); 
+  color: var(--basis-color); 
+  /* staat voor de andere content */
+  z-index: 1;
+}
+
+/* de image die onder de buttons komt te staan */
+main section:nth-of-type(2) ul li img {
+  display: none;
+  position: absolute;
+  width: 100%;
+  margin: 0em;
+  padding: 1em;
+  list-style: none;
+  /* Zorg ervoor dat de achtergrond zichtbaar is */
+  background-color: var(--kleur-achtergrond); 
+  color: var(--basis-color);
+  /* staat voor de andere content */
+  z-index: 1; 
+}
+
+
+
+/*************************************/
+/* grid artikelen you may also like */
+/*************************************/ 
 section:nth-of-type(3){
-    position: relative;
+  position: relative;
 }
 
 section:nth-of-type(3) > ul{
+  /* grid heeft 2 kolommen */
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1em;
@@ -294,36 +347,36 @@ section:nth-of-type(3) > ul{
 /* zodat er op de juiste manier de kolommen worden veranderd bij de responsiveness */
 @media (width > 55em){
 	section:nth-of-type(3) ul {
-        grid-template-columns:repeat(4, 1fr);
+    /* bij een breeder scherm worden er 4 kolommen weergegeven */
+    grid-template-columns:repeat(4, 1fr);
 	}
 }
 
-/*  uit de grid per artikel les gehaald voor het kopje you may also like */
+/* bron hiervoor https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20grid.pdf 
+hierbij heb ik naar oefening 1 gekeken */
 main section:nth-of-type(3) > ul > li{
-	/* de cards hebben een verhouding van 2 breed bij 4 hoog */
-  /* mits de content dat toestaat */
   display:grid;
   /* 2 kolommen */
   /* de tweede is zo breed als de plus button */
   /* de eerste krijgt de rest van de ruimte */
   /* de verschillende kleur opties staan links in de kolom */
+  /* verhouding van 2 breed (columns) bij 4 hoog (rows)  */
   grid-template-columns:auto min-content;
-  /* 3 rijen */
+  /* 4 rijen */
   /* alle rijen zijn zo hoog als de content */
-  grid-template-rows: min-content min-content min-content min-content min-content;
-  /* row-gap:  0;em;  waarom moet dit weg?? VRAGEN*/ 
+  grid-template-rows: min-content min-content min-content min-content min-content; 
 }
 
-/* voor de titel */
-main section:nth-of-type(3) > ul > li a:nth-of-type(1) {
-  /* grid-area: row-start / column-start / row-end / col-end */
-  grid-area: 3 / 1 / 4 / 2 ;
-  
-}
-
+/* voor de titel you may also like */
 main section:nth-of-type(3) > ul > li a h3 {
   margin: 0em; 
   color: var(--basis-color);
+}
+
+/* voor de titel van eht artikel */
+main section:nth-of-type(3) > ul > li a:nth-of-type(1) {
+  /* grid-area: row-start / column-start / row-end / col-end */
+  grid-area: 3 / 1 / 4 / 2 ;
 }
 
 /* voor de image */
@@ -343,24 +396,23 @@ main section:nth-of-type(3) > ul > li p:nth-of-type(1) {
 
 /* voor de kleuren lijst */
 main section:nth-of-type(3) ul ul{
-    /* aspect-ratio: 1; */
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: .3em;
-    padding-left: 0em;
-    /* grid-area: row-start / column-start / row-end / col-end */
-    grid-area: 5 / 1 / 6 / 2;
-    margin: 0;     
-    /* width: 5px;  */
+  list-style-type: none;
+  display: flex;
+  /* zo komen de bolletjes naast elkaar te staan */
+  align-items: center;
+  gap: .3em;
+  padding-left: 0em;
+  /* grid-area: row-start / column-start / row-end / col-end */
+  grid-area: 5 / 1 / 6 / 2;
+  margin: 0; 
 }
  
-
+/* stijlen van de kleuren bolletjes zelf */
 main section:nth-of-type(3) ul ul li a {
   display:block;
   width:1em;
   aspect-ratio: 1;
-  background-color: black;
+  border: 0.05em solid var(--color-black) ;
   border-radius: 50%;
   width: .6em;
 }
@@ -370,6 +422,26 @@ main section:nth-of-type(3) ul ul li:nth-last-child(1){
  margin-left: .1em;
  background-color: transparent;
  border: none;
+}
+
+/* stijlen van eerste bolletje */
+section:nth-of-type(3) ul ul li:nth-of-type(1) a {
+  background-color: var(--kleuropties1);
+}
+
+/* stijlen van tweede bolletje */
+section:nth-of-type(3) ul ul li:nth-of-type(2) a {
+  background-color: var(--kleuropties2);
+}
+
+/* stijlen van derde bolletje */
+section:nth-of-type(3) ul ul li:nth-of-type(3) a {
+  background-color: var(--kleuropties3);
+}
+
+/* stijlen van vierde bolletje */
+section:nth-of-type(3) ul ul li:nth-of-type(4) a {
+  background-color: var(--kleuropties4);
 }
 
 /* voor new in */
@@ -386,35 +458,37 @@ main section:nth-of-type(3) ul li button {
   grid-area: 3 / 2 / 4 / 3;
   width: 2em;
   height: 2em;
-  margin: 0;
   border: none;
 	background-color: transparent;
-	/* dit moet op alle buttons!!! */
 	background: none;
-  align-self:center; /* verticaal midden */
+  /* verticaal midden */
+  align-self:center; 
 }
 
-
+/* stijlen van de image hij mag de gehele ruimte binnen het grid gebruiken */
 main section:nth-of-type(3) img {
   width: 100%;
-   display:grid;
-  grid-template-columns:1fr 1fr;
 }
 
 
-
-
-
-/* code voor de carrousel van plaatjes*/
-
+/******************************/
+/* scroll carrousel */
+/******************************/
+/* bron 
+https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20flexbox.pdf
+hierbij heb ik naar oefening 13 gekeken */
 main section:nth-of-type(4) ul:nth-of-type(1) {
-    display: flex;
-    overflow-x: auto;
-    gap: 1em;
-    list-style: none;
-	  padding: 0;
-    scrollbar-width: none; /* Voor Firefox */
-    -ms-overflow-style: none; /* Voor Internet Explorer en Edge */
+  /* elementen komen in een rij te staan */
+  display: flex;
+  /* elementen die er niet op passen snappen */
+  overflow-x: auto;
+  /* ruimte tussende foto's */
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  /* geen scroll bar */
+  scrollbar-width: none; /* Voor Firefox */
+  -ms-overflow-style: none; /* Voor Internet Explorer en Edge */
 }
 
 main section:nth-of-type(4) ul:nth-of-type(1) li {
@@ -422,15 +496,17 @@ main section:nth-of-type(4) ul:nth-of-type(1) li {
   /*  zo wordt het mogelijk om de shop link in het midden van eht plaatje te zetten */
 }
 
-
+/* stijlen van de foto's */
 main section:nth-of-type(4) ul:nth-of-type(1) img {
-	display: flex;
-    width: 20em;
+  width: 20em;
 } 
 
+/* shop link stijlen */
 main section:nth-of-type(4) ul:nth-of-type(1) a:nth-of-type(2) {
+  /* is alleen te zijn bij hoveren */
   opacity: 0;
   position: absolute;
+  /* in het midden van de image */
   top:50%;
   left: 40%;
   border: .1em solid var(--basis-color);
@@ -440,20 +516,14 @@ main section:nth-of-type(4) ul:nth-of-type(1) a:nth-of-type(2) {
   padding: .5em;
 }
 
-/* bij hoveren */
+/* image bij hoveren */
 main section:nth-of-type(4) ul:nth-of-type(1) img:hover {
-    opacity: 0.4;
-    /* zorg voorde witte gloed over de img */
+  /* zorgt voorde witte gloed over de img */
+  opacity: 0.4;
 } 
 
+/* shop link op moment van hoveren */
 main section:nth-of-type(4) ul:nth-of-type(1) li:hover a:nth-of-type(2) {
+    /* shop link is nu wel te zien */
   opacity: 1;
-
 }
-
- 
-
-/* klopt dit?? nakijken */
-.clothes > nav a.current {
-    background-color: currentColor;
-  }
